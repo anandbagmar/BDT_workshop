@@ -1,13 +1,16 @@
 
-module HomePage
+class HomePage
+  def initialize session
+    @session = session
+  end
+
   def openHomePage
-    visit HOMEPAGE
+   @session.visit HOMEPAGE
   end
 
   def searchForSomething search_para
-    fill_in("gh-ac", :with => 'dell laptop')
-    click_button 'Search'
+    @session.fill_in("gh-ac", :with => search_para)
+    @session.click_button 'Search'
   end
 end
 
-World(HomePage)

@@ -1,9 +1,5 @@
-include Test::Unit::Assertions
 
-class SearchPage
-  def initialize session
-    @session = session
-  end
+class SearchPage < BasePage
 
   def verifySearchResultsPresent
     assert_equal @session.find(:xpath, "//div[@id='TopPanelDFItemCount']/div/span[1]").visible?, true

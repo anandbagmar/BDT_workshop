@@ -1,8 +1,5 @@
 
-class HomePage
-  def initialize session
-    @session = session
-  end
+class HomePage < BasePage
 
   def openHomePage
    @session.visit HOMEPAGE

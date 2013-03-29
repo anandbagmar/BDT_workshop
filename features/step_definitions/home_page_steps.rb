@@ -1,13 +1,11 @@
 Given /^I am on ebay homepage$/ do
-  @homePage = HomePage.new(Capybara.current_session)
-  @homePage.openHomePage()
+  on_page(:home).openHomePage
 end
 
 When /^I search for "([^"]*)"$/ do |search_para|
-  @homePage.searchForSomething(search_para)
+  on_page(:home).searchForSomething(search_para)
 end
 
 Then /^results should be shown$/ do
-  @searchPage = SearchPage.new(Capybara.current_session)
-  @searchPage.verifySearchResultsPresent
+  on_page(:search).verifySearchResultsPresent
 end

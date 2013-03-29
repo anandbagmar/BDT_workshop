@@ -1,13 +1,17 @@
 
-class HomePage < BasePage
+module HomePage
 
-  def openHomePage
-   @session.visit HOMEPAGE
-  end
+  class << self
 
-  def searchForSomething search_para
-    @session.fill_in("gh-ac", :with => search_para)
-    @session.click_button 'Search'
+    def openHomePage
+      puts "in openHomePage"
+      $session.visit HOMEPAGE
+    end
+
+    def searchForSomething search_para
+      $session.fill_in("gh-ac", :with => search_para)
+      $session.click_button 'Search'
+    end
   end
 end
 

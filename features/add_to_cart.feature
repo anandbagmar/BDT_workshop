@@ -4,3 +4,6 @@ Feature: Search for an item an be able to add to shopping cart
     Given I am on ebay homepage
     And I search for "dell laptops"
     Then results should be shown
+    When I select an item as "Dell Inspiron"
+    And I add the item to cart
+    Then I am on login page

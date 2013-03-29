@@ -1,5 +1,5 @@
 
-module Navigation1
+module Navigation
   class << self
     def navigateToHomepage
       HomePage.openHomePage

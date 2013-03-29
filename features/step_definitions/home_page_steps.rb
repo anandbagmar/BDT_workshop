@@ -1,22 +1,14 @@
 Given /^I search for "([^"]*)"$/ do |search_para|
-  Navigation1.navigateToHomepage
-  #searchForProduct(search_para)
-  #verifySearchResultsPresent
-
-  #on_page(:home).openHomePage
-  #on_page(:home).searchForSomething(search_para)
-
+  Navigation.navigateToHomepage
+  Search.searchForProduct(search_para)
+  #Search.verifySearchResultsPresent
 end
 
+Given /^as a registered user I search for "([^"]*)"$/ do |search_para|
+  Navigation.navigateToHomepage
+  Login.login_as_register_user(username="tworker13",password="something1")
+  HomePage.verifyUserSuccessfullyLoggedIn
+  Search.searchForProduct(search_para)
+  Search.verifySearchResultsPresent
+end
 
-#
-#module Module1
-#  class << Module1
-#    def self.add(a, b)
-#      return a + b
-#    end
-#    def subtract(a, b)
-#      return a - b
-#    end
-#  end
-#end

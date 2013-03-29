@@ -8,3 +8,14 @@
 #
 #end
 #
+
+
+module SearchPage
+  class << self
+    def getSearchResultHeader
+      $SESSION_DATA.mysession.find(:xpath, "//div[@id='TopPanelDFItemCount']/div/span[1]")
+    end
+  end
+end
+
+

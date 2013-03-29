@@ -12,13 +12,20 @@ Dir.glob(File.join($PROJECT_ROOT, "features","domain_layer", "*.rb")).each do |f
   #load file
 end
 
+#$sessiondata = SessionInitialiser.new.create_session()
 
 Before do |scenario, session|
 
   puts "Initialising session"
-  $session = Capybara::Session.new(:selenium)
-  $session
+  #@session = SessionInitialiser.initialize(Capybara::Session.new(:selenium))
+  #$SESSION_DATA ||= SessionInitialiser
+  $SESSION_DATA ||= SessionInitialiser.create_session()
+
+  #$session = Capybara::Session.new(:selenium)
+  #$session
 end
+
+
 
 
 

@@ -5,7 +5,7 @@ module HomePage
 
     def openHomePage
       puts "in openHomePage"
-      $session.visit HOMEPAGE
+      $SESSION_DATA.mysession.visit HOMEPAGE
     end
 
     def searchForSomething search_para

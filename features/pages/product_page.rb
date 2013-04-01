@@ -1,8 +1,12 @@
-#
-#class ProductPage < BasePage
-#  # To change this template use File | Settings | File Templates.
-#
-#  def addToCart
-#    @session.click_link "Add to Cart"
-#  end
-#end
+
+module ProductPage
+  class << self
+    def getProductHeader
+      $SESSION_DATA.mysession.find(:xpath, "//h1")
+    end
+
+    def addToCart
+      $SESSION_DATA.mysession.find(:link, "Add to Cart").click
+    end
+  end
+end

@@ -1,8 +1,8 @@
 module SignIn
   class << self
-    def login_as_register_user (username, password)
+    def login_as_register_user
       HomePage.signIn
-      SignIn.enter_details_and_submit(username, password)
+      SignInPage.enter_details_and_submit("tworker13","something1")
     end
 
     def verifyOnLoginPage

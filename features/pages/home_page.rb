@@ -15,6 +15,5 @@ module HomePage
     def signIn
       $SESSION_DATA.mysession.click_link 'Sign in'
     end
-  end
 end
-
+end

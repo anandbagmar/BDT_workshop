@@ -7,5 +7,9 @@ module Product
     def addToCart
       ProductPage.addToCart
     end
+
+    def verifyproductdetails
+      assert_equal ProductPage.getPrice,$price
+    end
   end
 end

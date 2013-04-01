@@ -1,4 +1,3 @@
-include Test::Unit::Assertions
 module Product
   class << self
     def verifyOnProductPage product_name

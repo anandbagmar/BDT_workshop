@@ -1,9 +1,8 @@
-include Test::Unit::Assertions
-module Login
+module SignIn
   class << self
     def login_as_register_user (username, password)
-      HomePage.SignIn
-      Login.enter_details_and_submit(username, password)
+      HomePage.signIn
+      SignIn.enter_details_and_submit(username, password)
     end
 
     def verifyOnLoginPage

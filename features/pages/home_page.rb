@@ -12,7 +12,7 @@ module HomePage
       $SESSION_DATA.mysession.click_button 'Search'
     end
 
-    def SignIn
+    def signIn
       $SESSION_DATA.mysession.click_link 'Sign in'
     end
   end

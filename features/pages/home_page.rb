@@ -4,7 +4,6 @@ module HomePage
   class << self
 
     def openHomePage
-      puts "in openHomePage"
       $SESSION_DATA.mysession.visit HOMEPAGE
     end
 

@@ -1,7 +1,6 @@
 Given /^I search for "([^"]*)"$/ do |search_para|
   Navigation.navigateToHomepage
   Search.searchForProduct(search_para)
-  #Search.verifySearchResultsPresent
 end
 
 Given /^as a registered user I search for "([^"]*)"$/ do |search_para|

@@ -1,3 +1,4 @@
+#include Test::Unit::Assertions
 module SignIn
   class << self
     def login_as_register_user

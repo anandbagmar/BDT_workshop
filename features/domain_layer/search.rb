@@ -1,16 +1,18 @@
 include Test::Unit::Assertions
-module Search
-  class << self
-    def searchForProduct search_para
-      HomePage.searchFor search_para
-    end
+module Domain
+  module Search
+    class << self
+      def searchForProduct search_para
+        Page::HomePage.searchFor search_para
+      end
 
-    def verifySearchResultsPresent
-      assert_equal SearchPage.getSearchResultHeader.visible?, true
-    end
+      def verifySearchResultsPresent
+        assert_equal Page::SearchPage.getSearchResultHeader.visible?, true
+      end
 
-    def selectFirstItemWithTitle item_title
-      SearchPage.selectFirstItem item_title
+      def selectFirstItemWithTitle item_title
+        Page::SearchPage.selectFirstItem item_title
+      end
     end
   end
 end

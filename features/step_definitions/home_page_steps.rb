@@ -1,13 +1,13 @@
 Given /^I search for "([^"]*)"$/ do |search_para|
-  Navigation.navigateToHomepage
-  Search.searchForProduct(search_para)
-  Search.verifySearchResultsPresent
+  Domain::Navigation.navigateToHomepage
+  Domain::Search.searchForProduct(search_para)
+  Domain::Search.verifySearchResultsPresent
 end
 
 Given /^as a registered user I search for "([^"]*)"$/ do |search_para|
-  Navigation.navigateToHomepage
-  SignIn.login_as_register_user
-  Search.searchForProduct(search_para)
-  Search.verifySearchResultsPresent
+  Domain::Navigation.navigateToHomepage
+  Domain::SignIn.login_as_register_user
+  Domain::Search.searchForProduct(search_para)
+  Domain::Search.verifySearchResultsPresent
 end
 

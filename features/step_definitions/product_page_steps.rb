@@ -1,8 +1,8 @@
 
 When /^I add it to my shopping cart$/ do
-  Product.addToCart
+  Domain::Product.addToCart
 end
 
 Then /^I should see correct product details$/ do
-  Product.verifyproductdetails
+  Domain::Product.verifyproductdetails
 end
